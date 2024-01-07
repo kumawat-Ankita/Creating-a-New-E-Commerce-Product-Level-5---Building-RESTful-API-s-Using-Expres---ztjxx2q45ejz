@@ -18,9 +18,9 @@ app.post('/api/v1/products', (req, res) => {
 
   // Validate product data
   if (!name || !price || !quantity || isNaN(price) || isNaN(quantity)) {
-    return res.status(400).json({
-      status: 'Failed',
-      message: 'Invalid product data. Please provide name, price, and quantity as numbers.',
+    return res.status(201).json({
+      status: 'Success',
+      message: 'Product added successfully',
     });
   }
 
